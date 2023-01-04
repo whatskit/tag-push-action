@@ -100,4 +100,3 @@ __tests__/runner/*
 .vscode
 .env.local
 .DS_Store
-lib
