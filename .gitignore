@@ -98,7 +98,6 @@ Thumbs.db
 __tests__/runner/*
 
 .vscode
-dist
 .env.local
 .DS_Store
 lib
