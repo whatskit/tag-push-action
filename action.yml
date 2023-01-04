@@ -13,4 +13,4 @@ inputs:
     description: 'Docker config file path'
 runs:
   using: 'node16'
-  main: 'lib/main.js'
+  main: 'dist/index.js'

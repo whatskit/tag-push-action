@@ -1,4 +1,5 @@
-import {parse} from 'csv-parse/lib/sync'
+// eslint-disable-next-line import/no-unresolved
+import {parse} from 'csv-parse/sync'
 import * as core from '@actions/core'
 import * as exec from '@actions/exec'
 
