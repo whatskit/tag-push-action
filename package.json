@@ -1,6 +1,6 @@
 {
   "name": "@whatskit/tag-push-action",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Github action to retag and push multiplatform images to multiple registries",
   "main": "lib/main.js",
   "scripts": {
