@@ -31,7 +31,7 @@ async function run(): Promise<void> {
       `${dockerConfigPath}:/root/.docker/config.json`,
       '--network',
       'host',
-      'nethost/alpine:latest',
+      'nethost/alpine:3.8',
       source,
       ...destination
     ])
