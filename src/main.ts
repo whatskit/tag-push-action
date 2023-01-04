@@ -31,7 +31,7 @@ async function run(): Promise<void> {
       `${dockerConfigPath}:/root/.docker/config.json`,
       '--network',
       'host',
-      'whatskit/repo-copy:latest',
+      'nethost/alpine:latest',
       source,
       ...destination
     ])

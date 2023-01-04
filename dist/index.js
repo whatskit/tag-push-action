@@ -40,6 +40,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getDestinationTags = void 0;
+// eslint-disable-next-line import/no-unresolved
 const sync_1 = __nccwpck_require__(393);
 const core = __importStar(__nccwpck_require__(186));
 const exec = __importStar(__nccwpck_require__(514));
@@ -67,7 +68,7 @@ function run() {
                 `${dockerConfigPath}:/root/.docker/config.json`,
                 '--network',
                 'host',
-                'whatskit/repo-copy:latest',
+                'nethost/alpine:latest',
                 source,
                 ...destination
             ]);
