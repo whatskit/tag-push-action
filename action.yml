@@ -1,6 +1,6 @@
-name: 'Tag-Push Action'
+name: 'tag-push-action'
 description: 'Retag and push multiplatform docker images'
-author: 'Akhil Mohan'
+author: 'Billgo <hi@billgo.me>'
 inputs:
   src:
     required: true
