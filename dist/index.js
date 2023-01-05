@@ -40,7 +40,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getDestinationTags = void 0;
-// eslint-disable-next-line import/no-unresolved
 const sync_1 = __nccwpck_require__(393);
 const core = __importStar(__nccwpck_require__(186));
 const exec = __importStar(__nccwpck_require__(514));
@@ -51,12 +50,10 @@ function run() {
             const dockerConfigPath = core.getInput('docker-config-path') || '/home/runner/.docker/config.json';
             const destination = yield getDestinationTags();
             if (source === '') {
-                // eslint-disable-next-line i18n-text/no-en
                 core.setFailed('Source image not set');
                 return;
             }
             if (destination.length === 0) {
-                // eslint-disable-next-line i18n-text/no-en
                 core.setFailed('Destination image not set');
                 return;
             }
@@ -68,11 +65,10 @@ function run() {
                 `${dockerConfigPath}:/root/.docker/config.json`,
                 '--network',
                 'host',
-                'nethost/alpine:3.8',
+                'akhilerm/repo-copy:latest',
                 source,
                 ...destination
             ]);
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         }
         catch (error) {
             core.setFailed(error.message);

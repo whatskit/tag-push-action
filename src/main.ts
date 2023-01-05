@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import {parse} from 'csv-parse/sync'
 import * as core from '@actions/core'
 import * as exec from '@actions/exec'
@@ -12,13 +11,11 @@ async function run(): Promise<void> {
     const destination: string[] = await getDestinationTags()
 
     if (source === '') {
-      // eslint-disable-next-line i18n-text/no-en
       core.setFailed('Source image not set')
       return
     }
 
     if (destination.length === 0) {
-      // eslint-disable-next-line i18n-text/no-en
       core.setFailed('Destination image not set')
       return
     }
@@ -31,11 +28,10 @@ async function run(): Promise<void> {
       `${dockerConfigPath}:/root/.docker/config.json`,
       '--network',
       'host',
-      'nethost/alpine:3.8',
+      'akhilerm/repo-copy:latest',
       source,
       ...destination
     ])
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     core.setFailed(error.message)
   }

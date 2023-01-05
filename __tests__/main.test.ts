@@ -2,33 +2,33 @@ import * as main from '../src/main'
 
 describe('getDestinationTags', () => {
   it('single image', async () => {
-    await setInput('dst', 'whatskit/linux-utils:ci')
+    await setInput('dst', 'akhilerm/linux-utils:ci')
     const res = await main.getDestinationTags()
-    expect(res).toEqual(['whatskit/linux-utils:ci'])
+    expect(res).toEqual(['akhilerm/linux-utils:ci'])
   })
 
   it('multiple images', async () => {
     await setInput(
       'dst',
-      'whatskit/linux-utils:ci\nquay.io/whatskit/linux-utils:ci'
+      'akhilerm/linux-utils:ci\nquay.io/akhilerm/linux-utils:ci'
     )
     const res = await main.getDestinationTags()
     expect(res).toEqual([
-      'whatskit/linux-utils:ci',
-      'quay.io/whatskit/linux-utils:ci'
+      'akhilerm/linux-utils:ci',
+      'quay.io/akhilerm/linux-utils:ci'
     ])
   })
 
   it('multiline images', async () => {
     await setInput(
       'dst',
-      `whatskit/linux-utils:ci
-       quay.io/whatskit/linux-utils:ci`
+      `akhilerm/linux-utils:ci
+       quay.io/akhilerm/linux-utils:ci`
     )
     const res = await main.getDestinationTags()
     expect(res).toEqual([
-      'whatskit/linux-utils:ci',
-      'quay.io/whatskit/linux-utils:ci'
+      'akhilerm/linux-utils:ci',
+      'quay.io/akhilerm/linux-utils:ci'
     ])
   })
 })
